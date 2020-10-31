@@ -36,25 +36,3 @@ window.addEventListener('load', function() {
     jQuery(window).load(function() {
         jQuery("#preloader").fadeOut("slow");
     });
-    window.addEventListener('load', function() { setTimeout(function(){
-        function loadjscssfile(filename, filetype){
-            if (filetype=="js"){ //if filename is a external JavaScript file
-                var fileref=document.createElement('script')
-                fileref.setAttribute("type","text/javascript")
-                fileref.setAttribute("src", filename)
-            }
-            else if (filetype=="css"){ //if filename is an external CSS file
-                var fileref=document.createElement("link")
-                fileref.setAttribute("rel", "stylesheet")
-                fileref.setAttribute("type", "text/css")
-                fileref.setAttribute("href", filename)
-            }
-            if (typeof fileref!="undefined")
-                document.getElementsByTagName("footer")[0].appendChild(fileref)
-        }
-    loadjscssfile("https://images.dmca.com/Badges/DMCABadgeHelper.min.js", "js")
-    },5000); });
-    
-    !function(){function c(c,e){console.log(Date.now(),c,e.getAttribute("data-src"))}new LazyLoad({elements_selector:".lazy",callback_enter:function(e){c("ENTERED",e)},callback_exit:function(e){c("EXITED",e)},callback_reveal:function(e){c("REVEALED",e)},callback_loaded:function(e){c("LOADED",e)},callback_error:function(e){c("ERROR",e),e.src="https://via.placeholder.com/440x560/?text=Error+Placeholder"},callback_finish:function(){c("FINISHED",document.documentElement)}})}();
-    !function(){var c=[];function e(c,e){console.log(Date.now(),c,e.getAttribute("data-src"))}new LazyLoad({elements_selector:".cc-slidebox-wrapper.owl-carousel",callback_enter:function(a){var n=new LazyLoad({container:a});c.push(n),e("ENTERED",a)},callback_exit:function(c){e("EXITED",c)},callback_reveal:function(c){e("REVEALED",c)},callback_loaded:function(c){e("LOADED",c)},callback_error:function(c){e("ERROR",c),c.src="https://via.placeholder.com/440x560/?text=Error+Placeholder"},callback_finish:function(){e("FINISHED",document.documentElement)}})}();
-    
